@@ -1,0 +1,10 @@
+name: kraken2-docker
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+
+dependencies: 
+  - kraken2=2.1.1-0
+  - bracken=2.6.0-2
+  - krona=2.7.1
