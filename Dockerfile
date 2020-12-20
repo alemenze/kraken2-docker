@@ -5,6 +5,7 @@ LABEL authors="Alex Lemenze" \
 COPY environment.yml /
 RUN apt-get update \
  && apt-get install -y procps \
+ && apt-get install -y build essential \
  && apt-get clean -y && rm -rf /var/lib/apt/lists/*
 RUN conda env create -f /environment.yml && conda clean --all
 ENV PATH /opt/conda/envs/kraken2-docker/bin:$PATH
