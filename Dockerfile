@@ -9,3 +9,4 @@ RUN apt-get update \
  && apt-get clean -y && rm -rf /var/lib/apt/lists/*
 RUN conda env create -f /environment.yml && conda clean --all
 ENV PATH /opt/conda/envs/kraken2-docker/bin:$PATH
+RUN ktUpdateTaxonomy.sh
